@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Not found!</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <style>
+      html{cursor: url(../content/custom_cursor/aero/aero\ normal.cur), auto;}
+      body{
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+      }
+      main{
+        display: flex;
+        width: 1440px;
+        height: 100vh;
+        background-color: #404040;
+        justify-content: center;
+        z-index: 2;
+      }
+      main section{
+        display: flex;
+        width: 50%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        z-index: 3;
+      }
+      main section img{
+        width: 250px;
+        pointer-events: none;
+        z-index: 4;
+      }
+      main section .wrap{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        background: #fff;
+        flex-direction: column;
+        z-index: 4;
+      }
+      main section .wrap .inner{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        z-index: 5;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      main section .wrap:nth-child(1){
+        justify-content: flex-end;
+        background-image: url(/content/gif/ZUiY.gif);
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat;
+      }
+      main section .wrap:nth-child(1) .inner.header{
+        display: flex;
+        background: #404040;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 128px;
+        line-height: 174px;
+        color: #fff;
+      }
+      .container{
+        padding-left: 140px;
+        padding-right: 140px;
+      }
+      .header{
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: bolder;
+        font-size: 48px;
+        line-height: 65px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        cursor: #000;
+        margin-bottom: 10px;
+      }
+      .text{
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        color: #000;
+        margin-bottom: 10px;
+      }
+      .btn{
+        width: 200px;
+        height: 50px;
+        background: #D9D9D9;
+        border-radius: 4px;
+        border: 0;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        cursor: pointer;
+      }
+      .buttons{
+        display: flex;
+        justify-content: space-between;
+      }
+      @media (max-width: 1440px){.container{padding: 0; max-width: 440px;}}
+      @media (max-width: 1100px){
+        #sec_1{display: none; width: 0;}
+        #sec_2{width: 100%;}
+     }
+      @media (max-width: 500px){
+        .header{font-size: 36px;}
+        .text{font-size: 14px;}
+        .btn{width: 150px; height: 40px;}
+        .container{padding: 10px;}
+     }
+     @media (max-width: 350px){
+        .header{font-size: 32px;}
+        .text{font-size: 12px;}
+        .btn{width: 100px; height: 30px; font-size: 18px;}
+        .container{padding: 10px;}
+     }
+    </style>
+</head>
+<body>
+    <main>
+      <section id="sec_1">
+
+      </section>
+      <section id="sec_2">
+        <div class="wrap">
+          <div class="inner header">
+            <h1>404</h1>
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="inner">
+            <div class="container">
+              <h1 class="header">UH OH! You're lost.</h1>
+              <p class="text">The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage.</p>
+              <div class="buttons">
+                <button class="btn" onclick="window.location.pathname = '/index.html'">HOME</button>
+                <button class="btn" onclick="window.location.reload()">RELOAD</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+</body>
+    <script>
+      if(window.screen.width >= 1440) {
+      var e = 5;
+      var n = Math.round(e * Math.random());
+      n = Math.trunc(n);
+      var gif = document.createElement('img');
+      gif.src = `/content/gif/error${n}.gif`
+      document.getElementById("sec_1").append(gif);
+      }
+  </script>
+</html>
