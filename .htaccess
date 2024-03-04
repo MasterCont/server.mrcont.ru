@@ -10,6 +10,11 @@ RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
     </FilesMatch>
 </IfModule>
 
+<FilesMatch "^env$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
 RewriteCond %{REQUEST_URI} !\?
 RewriteCond %{REQUEST_URI} !\&
 RewriteCond %{REQUEST_URI} !\=
