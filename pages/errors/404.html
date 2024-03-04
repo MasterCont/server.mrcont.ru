@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <style>
-      html{cursor: url(../content/custom_cursor/aero/aero\ normal.cur), auto;}
       body{
         display: flex;
         justify-content: center;
@@ -166,12 +165,12 @@
 </body>
     <script>
       if(window.screen.width >= 1440) {
-      var e = 5;
-      var n = Math.round(e * Math.random());
-      n = Math.trunc(n);
-      var gif = document.createElement('img');
-      gif.src = `/content/gif/error${n}.gif`
-      document.getElementById("sec_1").append(gif);
+          const e = 4;
+          let n = Math.round(e * Math.random());
+          n = Math.trunc(n);
+          const gif = document.createElement('img');
+          gif.src = `/assets/gif/error${n}.gif`
+          document.getElementById("sec_1").append(gif);
       }
   </script>
 </html>
