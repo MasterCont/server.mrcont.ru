@@ -40,7 +40,7 @@ try {
                     </svg>
                     Добавить приложение
                 </button>
-                <button type="button" class="btn btn-secondary btn-lg px-4" onclick="window.location.href='https://discord.com/invite/vTU4dGrA?utm_source=Discord%20Widget&utm_medium=Connect'" >Сервер разработчика</button>
+                <button type="button" class="btn btn-secondary btn-lg px-4" onclick="window.location.href='<?php echo $env['DISCORD_SERVER_DEFAULT_INVITE_LINK']; ?>'" >Сервер разработчика</button>
             </div>
         </div>
         <div class="product-device shadow-sm d-none d-md-block"></div>
