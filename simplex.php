@@ -27,11 +27,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="yandex-verification" content="0842efd0de3f9518" />
     <title>Simplex - Discord bot</title>
-    <link rel="stylesheet" href="<?php echo $server_root; ?>src/css/reset.css">
-    <link rel="stylesheet" href="<?php echo $server_root; ?>src/css/fonts.css">
-    <link rel="stylesheet" href="<?php echo $server_root; ?>src/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo $server_root; ?>src/css/sidebars.css">
-    <link rel="stylesheet" href="<?php echo $server_root; ?>src/css/style.css">
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/fonts.css">
+    <link rel="stylesheet" href="/src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/css/sidebars.css">
+    <link rel="stylesheet" href="/src/css/style.css">
     <link rel="shortcut icon" href="src/assets/images/favicon.png" type="image/x-icon">
 </head>
 <body>
