@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+.mrcont-plugin-block{
+    display: flex;
+    min-width: 200px;
+    max-width: 400px;
+    height: 80px;
+    position: fixed;
+    top: 50px;
+    background: #222;
+    border-radius: 4px;
+    animation: start 5s linear;
+    padding-left: 8px;
+    font-family: 'Overpass', sans-serif;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10px;
+    z-index: 999999999;
+    overflow: hidden;
+}
+.mrcont-plugin-block::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    border-radius: 4px;
+}
+.log::before{background: green;}
+.warn::before{background: yellow;}
+.error::before{background: red;}
+@keyframes start {
+    0%{
+        left: -500px;
+    }
+    10%{
+        left: 50px;
+    }
+    90%{
+        left: 50px;
+    }
+    100%{
+        left: -500px;
+    }
+}
+.mrcont-plugin-h1{
+    display: inline-flex;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 10px;
+    font-weight: bold;
+}
+.mrcont-plugin-text{
+    display: inline-flex;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+#loading{
+	z-index: 9999999999;
+	width: 128px;
+	height: 128px;
+	position: fixed;
+	top: calc(50% - 64px);
+	left: calc(50% - 64px);
+	/* border: 1px solid black; */
+	background: no-repeat center;
+	background-size: cover;
+}

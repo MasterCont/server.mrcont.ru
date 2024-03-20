@@ -1,0 +1,117 @@
+/* Shizuru */
+@font-face{
+    font-family: Shizuru;
+    src: url(../fonts/Shizuru-Regular.ttf);
+}
+
+/* Inconsolata */
+@font-face{
+    font-family: Inconsolata;
+    src: url(../fonts/Inconsolata-Black.ttf);
+}
+@font-face{
+    font-family: InconsolataRegular;
+    src: url(../fonts/Inconsolata-Regular.ttf);
+}
+
+/* Righteous */
+@font-face{
+    font-family: Righteous;
+    src: url(../fonts/Righteous-Regular.ttf);
+}
+
+/* Rubik */
+@font-face{
+    font-family: Rubik;
+    src: url(../fonts/Rubik-VariableFont_wght.ttf);
+}
+@font-face{
+    font-family: RubikItalic;
+    src: url(../fonts/Rubik-Italic-VariableFont_wght.ttf);
+}
+
+/* Ropa Sans */
+@font-face{
+    font-family: 'Ropa Sans';
+    src: url(../fonts/RopaSans-Regular.ttf);
+}
+@font-face{
+    font-family: 'Ropa Sans Italic';
+    src: url(../fonts/RopaSans-Italic.ttf);
+}
+
+/* Voces */
+@font-face{
+    font-family: Voces;
+    src: url(../fonts/Voces-Regular.ttf);
+}
+
+/* Roboto */
+@font-face{
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face{
+    font-family: RobotoItalic;
+    src: url(../fonts/Roboto-Italic.ttf);
+}
+
+/* Minecraft's fonts */
+@font-face{
+    font-family: Bloxat-PDoE;
+    src: url(../fonts/Bloxat-PDoE.ttf);
+}
+
+/* Press Start 2P */
+@font-face{
+    font-family: "Press Start 2P";
+    src: url(../fonts/PressStart2P-Regular.ttf);
+}
+
+/* Noto Sans */
+@font-face{
+    font-family: "Noto Sans";
+    src: url(../fonts/NotoSans-Regular.ttf);
+}
+
+/* Roboto Mono */
+@font-face{
+    font-family: "Roboto Mono";
+    src: url(../fonts/RobotoMono-VariableFont_wght.ttf);
+}
+@font-face{
+    font-family: "Roboto Mono Italic";
+    src: url(../fonts/RobotoMono-Italic-VariableFont_wght.ttf);
+}
+
+/* Lato */
+@font-face{
+    font-family: "Lato";
+    src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face{
+    font-family: "Lato Italic";
+    src: url(../fonts/Lato-Italic.ttf);
+}
+
+/* Helvetica */
+@font-face{
+    font-family: Helvetica;
+    src: url(../fonts/helvetica_regular.otf);
+}
+
+/* Helvetica Neue */
+@font-face{
+    font-family: 'Helvetica Neue';
+    src: url(../fonts/HelveticaNeueCyr-Black.ttf);
+}
+@font-face{
+    font-family: "Helvetica Neue Italic";
+    src: url(../fonts/HelveticaNeueCyr-Italic.ttf);
+}
+
+/* sans-serif */
+@font-face{
+    font-family: sans-serif;
+    src: url(../fonts/microsoftsansserif.ttf);
+}

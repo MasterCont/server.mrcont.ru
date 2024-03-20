@@ -1,5 +1,7 @@
 {
     "require": {
-        "team-reflex/discord-php": "^7.3"
+        "team-reflex/discord-php": "^7.3",
+      "ext-mysqli": "*",
+        "twbs/bootstrap-icons": "^1.11"
     }
 }

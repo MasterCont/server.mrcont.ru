@@ -38,8 +38,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/team-reflex/discord-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/trafficcophp/bytebuffer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/twbs/bootstrap-icons" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="htmx.org" level="application" />
   </component>
 </module>

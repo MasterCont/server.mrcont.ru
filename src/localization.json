@@ -1,0 +1,178 @@
+{
+  "nav": {
+
+  },
+  "footer": {
+
+  },
+
+  "simplex": {
+    "title": {
+      "ru-RU": "Simplex - Дискорд бот",
+      "eu-US": "Simplex - Discord bot"
+    },
+    "main": {
+      "title": {
+        "ru-RU": "Приложение для людей",
+        "eu-US": "An app for people"
+      },
+      "under-title": {
+        "ru-RU": "Интегрированное системное приложение, основанное на платформе Discord",
+        "eu-US": "An integrated system application based on the Discord platform"
+      },
+      "buttons": {
+        "button_add": {
+          "ru-RU": "Добавить приложение",
+          "eu-US": "Add app"
+        },
+        "button_dev-server": {
+          "ru-RU": "Сервер разработчика",
+          "eu-US": "Developer's Server"
+        }
+      },
+      "products": {
+        "1": {
+          "title": {
+            "ru-RU": "Пользовательские команды",
+            "eu-US": "Custom Commands"
+          },
+          "description": {
+            "ru-RU": "Со множеством скрытых действий по модерации.",
+            "eu-US": "With many hidden moderation actions."
+          }
+        },
+        "2": {
+          "title": {
+            "ru-RU": "Аудит сообщений",
+            "eu-US": "Message audit"
+          },
+          "description": {
+            "ru-RU": "При желании мы сохраняем сообщения пользователей в базе данных для наших администраторов и модераторов.",
+            "eu-US": "If desired, we store user messages in the database for our administrators and moderators."
+          },
+          "additionally": {
+            "1": {
+              "ru-RU": "Мы уже сохранили",
+              "eu-US": "We have already saved"
+            },
+            "2": {
+              "ru-RU": "пользовательских сообщений в базе данных.",
+              "eu-US": "messages in the database."
+            }
+          }
+        }
+      }
+    },
+    "privacy": {
+
+    },
+    "terms": {
+
+    },
+    "sidebar": {
+      "title": {
+        "ru-RU": "Simplex",
+        "eu-US": "Simplex"
+      },
+      "nav_links": {
+        "main": {
+          "ru-RU": "Главная",
+          "eu-US": "Main"
+        },
+        "docs": {
+          "ru-RU": "Документация",
+          "eu-US": "Docs"
+        },
+        "privacy": {
+          "ru-RU": "Политика конфиденциальности",
+          "eu-US": "Privacy policy"
+        },
+        "terms": {
+          "ru-RU": "Условия использования",
+          "eu-US": "Terms of use"
+        }
+      }
+    },
+    "docs": {
+      "under_sidebar": {
+        "toggles": {
+          "getting_started": {
+            "id": "getting_started",
+            "title": {
+              "ru-RU": "Давайте начнём",
+              "eu-US": "Getting started"
+            },
+            "links": {
+              "overview": {
+                "ru-RU": "Обзор",
+                "eu-US": "Overview"
+              },
+              "adding": {
+                "ru-RU": "Добавление на сервер",
+                "eu-US": "Adding to the server"
+              }
+            }
+          },
+          "slash_commands": {
+            "id": "slash_commands",
+            "title": {
+              "ru-RU": "Слэш-команды",
+              "eu-US": "Slash-commands"
+            },
+            "links": {
+
+            }
+          }
+        }
+      },
+      "content": {
+        "options_title": {
+          "ru-RU": "Опции",
+          "eu-US": "Options"
+        },
+        "slash_command_tables": {
+          "id": {
+            "ru-RU": "ид",
+            "eu-US": "id"
+          },
+          "name": {
+            "ru-RU": "имя",
+            "eu-US": "name"
+          },
+          "default_permission": {
+            "ru-RU": "разрешение по умолчанию",
+            "eu-US": "default_permission"
+          },
+          "default_member_permissions": {
+            "ru-RU": "по умолчанию от пользователя с правами",
+            "eu-US": "default_member_permissions"
+          },
+          "dm_permission": {
+            "ru-RU": "dm позволение",
+            "eu-US": "dm_permission"
+          },
+          "nsfw": {
+            "ru-RU": "NSFW",
+            "eu-US": "NSFW"
+          },
+          "type": {
+            "ru-RU": "Тип",
+            "eu-US": "Type"
+          },
+          "required": {
+            "ru-RU": "Требуемый",
+            "eu-US": "Required"
+          },
+          "description": {
+            "ru-RU": "Описание",
+            "eu-US": "Description"
+          },
+          "undefined": {
+            "ru-RU": "Не определено",
+            "eu-US": "Undefined"
+          }
+        }
+      }
+    }
+  }
+}

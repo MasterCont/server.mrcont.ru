@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    transition: 0.3s !important;
+}
+
+:root{
+    --discord-color1: #23272a;
+    --discord-color2: #2c2f33;
+    --discord-color3: #99aab5;
+    --discord-color4: #ffffff;
+    --discord-color5: #7289da;
+
+    --sidebar-padding-left: 80px;
+}
+
+/* Animation for the appearance of text */
+/* Animation for text movement */
+@keyframes slide-down {
+    0% {
+        transform: translate(0, -100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+.fadeAnimationDown {
+    animation: slide-down 1s ease-in-out;
+}
+
+.fadeAnimationUp {
+    animation: slide-up 1s ease-in-out;
+}
+
+/*	Simplex page	*/
+.bg-body-tertiary.index{
+    background-image: url("/src/assets/images/simplex_index_bg.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.discord_bg_1{
+    background-color: var(--discord-color1);
+}
+
+.discord_bg_2{
+    background-color: var(--discord-color2);
+}
+
+.discord_bg_3{
+    background-color: var(--discord-color3);
+}
+
+.discord_bg_4{
+    background-color: var(--discord-color4);
+}
+
+.discord_bg_5{
+    background-color: var(--discord-color5);
+}
+
+#sidebar.active{
+    width: 300px;
+}
+
+#sidebar .nav-link{
+    min-height: 40px;
+    color: var(--bs-btn-color);
+    text-align: start;
+}
+
+#sidebar .nav-link:hover{
+    background-color: var(--bs-tertiary-bg) !important;
+}
+
+#sidebar .nav-link.active:hover{
+    background-color: var(--bs-nav-pills-link-active-bg) !important;
+}
+
+#sidebar.not_active, #sidebar.not_active .nav-link, #sidebar.not_active .fs-4, #sidebar.not_active .me-2, #sidebar.not_active .me-md-auto{
+    font-size: 0 !important;
+    justify-content: center;
+    margin-right: 0 !important;
+}
+
+.with_sidebar{
+    padding-left: var(--sidebar-padding-left) !important;
+}
+
+.with_sidebar.container{
+    border-top: none !important;
+}
+
+/* Document page */
+.document{
+    width: 80%;
+    min-height: 300px;
+    border-radius: 21px 21px 0 0;
+    padding: 0 2rem 0 2rem;
+    flex-direction: column;
+    align-items: start;
+}
+
+.document p, .document ul{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: start;
+}
