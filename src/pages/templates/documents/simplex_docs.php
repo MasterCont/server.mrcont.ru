@@ -8,21 +8,11 @@
     $slash_command = new slash_command();
     $table_commands = $db_simplex->query("SELECT * FROM ".$env['MYSQL_SIMPLEX_TABLE_COMMANDS_LIST'].";");
 
-    function getLocate($default_locate){
-        global $locates;
-        for ($i = 0; $i < count($locates); $i++){
-         if ($locates[$i] === $default_locate) return $default_locate;
-        }
-        return $locates[0]; // eu-US
-    }
-
-    getLocate($browserLocale);
-
 ?>
 
 <main class="d-flex">
-    <section id="under_sidebar" class="min-vh-100   ">
-        <div class="flex-shrink-0 p-3" style="width: 280px;">
+    <section id="under_sidebar" class="min-vh-100">
+        <div class="flex-shrink-0 p-3 content">
             <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
                 <?php include "$root/src/assets/images/bootstrap/icons/code-slash.svg"?>
                 <span class="fs-5 fw-semibold mx-2">

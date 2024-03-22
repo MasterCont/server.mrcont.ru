@@ -91,6 +91,12 @@
           "ru-RU": "Условия использования",
           "eu-US": "Terms of use"
         }
+      },
+      "buttons": {
+        "translate": {
+          "ru-RU": "Выбор языка",
+          "eu-US": "Language selection"
+        }
       }
     },
     "docs": {

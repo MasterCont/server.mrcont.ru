@@ -2,12 +2,12 @@
 
     $root = $_SERVER['DOCUMENT_ROOT'];
     require_once "$root/src/php/handler.php"; // Импорт файла-обработчика, в котором прописаны объекты и методы
-    global $localization, $browserLocale;
+    global $localization, $browserLocale, $env;
 
 
 ?>
 
-<div class="d-flex flex-column flex-shrink-0 p-3 bg-body-secondary position-fixed top-0 vh-100 not_active border-end" id="sidebar">
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-body-secondary position-fixed top-0 vh-100 not_active border-end z-3" id="sidebar">
     <a href="/simplex" class="d-flex align-items-center mb-0 me-md-auto text-decoration-none">
         <img class="bi pe-none me-2 rounded-circle" width="32" height="32" src="/src/assets/images/simplex_icon.png" alt="Logo">
         <span class="fs-4">
@@ -44,7 +44,7 @@
             </button>
         </li>
         <li>
-            <button hx-get="/src/pages/templates/documents/simplex_privacy" hx-target="main" class="btn nav-link d-flex align-items-center w-100">
+            <button hx-get="/src/pages/templates/documents/<?php echo getLocate($browserLocale); ?>/simplex_privacy" hx-target="main" class="btn nav-link d-flex align-items-center w-100">
                 <div class="me-2 d-flex align-items-center"><?php include "$root/src/assets/images/bootstrap/icons/file-text.svg"?></div>
                 <?php
                     error_reporting(0);
@@ -55,7 +55,7 @@
             </button>
         </li>
         <li>
-            <button hx-get="/src/pages/templates/documents/simplex_terms" hx-target="main" class="btn nav-link d-flex align-items-center w-100">
+            <button hx-get="/src/pages/templates/documents/<?php echo getLocate($browserLocale); ?>/simplex_terms" hx-target="main" class="btn nav-link d-flex align-items-center w-100">
                 <div class="me-2 d-flex align-items-center"><?php include "$root/src/assets/images/bootstrap/icons/file-text.svg"?></div>
                 <?php
                     error_reporting(0);
@@ -68,6 +68,26 @@
         <li>
     </ul>
     <hr>
+    <div class="dropdown my-2 w-100">
+        <button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+            <?php include "$root/src/assets/images/bootstrap/icons/translate.svg" ?>
+        </button>
+        <ul class="dropdown-menu" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 40px);" data-popper-placement="bottom-start">
+            <li><h6 class="dropdown-header">
+                    <?php
+                        error_reporting(0);
+                        $result = $localization->simplex->sidebar->buttons->translate->{$browserLocale};
+                        if (!$result) echo $localization->simplex->sidebar->buttons->translate->{"eu-US"};
+                        else echo $result;
+                    ?>
+                </h6></li>
+            <li><a class="dropdown-item" href="/lang?set=ru-RU"> <img alt="" width="16px" src="/src/assets/images/flags/48px/russia_icon.png"> Русский</a></li>
+            <li><a class="dropdown-item" href="/lang?set=eu-US"> <img alt="" width="16px" src="/src/assets/images/flags/48px/kingdom_united_icon.png"> English</a></li>
+<!--            <li><hr class="dropdown-divider"></li>-->
+<!--            <li><a class="dropdown-item" href="#">Separated link</a></li>-->
+        </ul>
+    </div>
+
     <button type="button" class="btn btn-secondary" id="btn_theme_switch">
         <?php include "$root/src/assets/images/bootstrap/icons/moon-stars.svg" ?>
     </button>

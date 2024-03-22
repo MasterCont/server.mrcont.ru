@@ -12,6 +12,7 @@
     }
 
     global $browserLocale;
+    $locate = getLocate($browserLocale);
 ?>
 
 <!DOCTYPE html>
@@ -33,8 +34,10 @@
     <link rel="stylesheet" href="/src/css/sidebars.css">
     <link rel="stylesheet" href="/src/css/style.css">
     <link rel="shortcut icon" href="src/assets/images/favicon.png" type="image/x-icon">
+    <script src="/src/js/main.js"></script>
 </head>
 <body>
+    <?php include "$root/src/pages/templates/simplex_sidebar.php"; ?>
     <?php
         error_reporting(0);
         if ($_GET["document"]) {
@@ -43,12 +46,10 @@
         else include "$root/src/pages/templates/simplex_index.php";
         // Подключаем контент главной страницы
     ?>
-    <?php include "$root/src/pages/templates/simplex_sidebar.php"; ?>
-    <?php include "$root/src/pages/templates/footers/simplex_footer.php"; ?>
-    <?php include "$root/src/pages/templates/footer.php"; // Подключаем футер ?>
+    <?php include "$root/src/pages/templates/footers/simplex/$locate/simplex_footer.php"; ?>
+    <?php include "$root/src/pages/templates/$locate/footer.php"; // Подключаем футер ?>
 </body>
     <script src="https://unpkg.com/htmx.org@1.9.11"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="/src/js/bootstrap.js"></script>
-    <script src="/src/js/main.js"></script>
+    <script src="/src/js/bootstrap.bundle.min.js"></script>
 </html>

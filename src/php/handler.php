@@ -1,7 +1,9 @@
 <?php
 
     // Файл-обработчик, в котором содержится код функций и команд.
-    $root = $_SERVER['DOCUMENT_ROOT'];
+use JetBrains\PhpStorm\NoReturn;
+
+$root = $_SERVER['DOCUMENT_ROOT'];
     $env = parse_ini_file("$root/.env");
     $localization = json_decode(file_get_contents("$root/src/localization.json"));
     $locates = ["eu-US", "ru-RU"];
@@ -38,18 +40,31 @@
         }
     }
 
-    function Redirect($url, $permanent = false){
+    #[NoReturn] function Redirect($url, $permanent = false): void{
         header('Location: ' . $url, true, $permanent ? 301 : 302);
         exit();
+    }
+
+    function getLocate($default_locate){
+        global $locates;
+        for ($i = 0; $i < count($locates); $i++){
+            if ($locates[$i] === $default_locate) return $default_locate;
+        }
+        return $locates[0]; // eu-US
     }
 
 
     // Скрипт для локализации страниц
     $localePreferences = explode(",",$_SERVER['HTTP_ACCEPT_LANGUAGE']);
-    if(is_array($localePreferences) && count($localePreferences) > 0) {
+    error_reporting(0);
+    if ($_GET["lang"]) $browserLocale = $_GET["lang"];
+    else if ($_COOKIE["lang"]) $browserLocale = $_COOKIE["lang"];
+    else if (is_array($localePreferences) && count($localePreferences) > 0) {
         $browserLocale = $localePreferences[0];
         $_SESSION['browser_locale'] = $browserLocale;
     }
+
+//    if (!$_COOKIE["lang"]) setcookie("lang", $browserLocale);
 
     // Подключаемся к базе данных системного интегрированного приложения "Discord bot 'Simplex'"
     $env = parse_ini_file("$root/.env");

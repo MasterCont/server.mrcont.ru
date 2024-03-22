@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    transition: 0.3s !important;
+    transition: 0.1s !important;
 }
 
 :root{
@@ -12,7 +12,7 @@
     --discord-color4: #ffffff;
     --discord-color5: #7289da;
 
-    --sidebar-padding-left: 80px;
+    --sidebar-padding-left: 100px;
 }
 
 /* Animation for the appearance of text */
@@ -75,6 +75,10 @@
     background-color: var(--discord-color5);
 }
 
+#sidebar{
+    min-width: var(--sidebar-padding-left);
+}
+
 #sidebar.active{
     width: 300px;
 }
@@ -105,6 +109,47 @@
 
 .with_sidebar.container{
     border-top: none !important;
+}
+
+#under_sidebar .content{
+    min-width: 280px;
+}
+
+@media(max-width: 768px){
+
+    :root{
+        --sidebar-h: "100px";
+    }
+
+    #sidebar{
+        flex-direction: row !important;
+        width: 100%;
+        height: var(--sidebar-h) !important;
+        position: relative !important;
+        justify-content: space-between !important;
+        justify-items: center !important;
+    }
+
+    #sidebar .nav{
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0 !important;
+    }
+
+    #sidebar .w-100{
+        width: auto !important;
+    }
+
+    main.d-flex{
+        flex-direction: column;
+    }
+
+    #under_sidebar{
+        min-height: auto !important;
+    }
+
+
 }
 
 /* Document page */

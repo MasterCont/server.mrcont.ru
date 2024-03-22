@@ -2,12 +2,15 @@
 let html = document.querySelector("html");
 let sidebar = document.getElementById("sidebar");
 let btn_theme_switch = document.getElementById("btn_theme_switch");
+const width_is_mobile = 758;
 
 // Scripts for the sidebar
 if (sidebar) {
     sidebar.addEventListener("mouseover", () => {
-       sidebar.classList.add("active");
-       sidebar.classList.remove("not_active");
+        if (window.innerWidth >= width_is_mobile){
+            sidebar.classList.add("active");
+            sidebar.classList.remove("not_active");
+        }
     });
 
     sidebar.addEventListener("mouseout", () => {
@@ -17,9 +20,19 @@ if (sidebar) {
 
 
     document.addEventListener("DOMContentLoaded",  async () => {
-        if (document.querySelector("main")) document.querySelector("main").classList.add("with_sidebar");
+        if (document.querySelector("main")) {
+            setInterval(() => {
+                if (window.innerWidth >= width_is_mobile) document.querySelector("main").classList.add("with_sidebar");
+                else document.querySelector("main").classList.remove("with_sidebar");
+            }, 100);
+        }
         let footers = document.querySelectorAll("footer");
-        for (let i = 0; i < footers.length; i++){ footers[i].classList.add("with_sidebar"); }
+        for (let i = 0; i < footers.length; i++){
+            setInterval(() => {
+                if (window.innerWidth >= width_is_mobile) footers[i].classList.add("with_sidebar");
+                else footers[i].classList.remove("with_sidebar");
+            }, 100);
+        }
 
         // Checking for a cookie to update the theme
         if (!getCookie("data_theme")) document.cookie = `data_theme=light`;

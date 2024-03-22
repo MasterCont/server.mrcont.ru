@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("lang") && !getCookie("lang")) {
+        document.cookie = `lang=${localStorage.getItem("lang")}`;
+        window.location.reload();
+    }
+    if (getCookie("lang")) localStorage.setItem("lang", getCookie("lang"));
+});
+
 async function addGETVars(variables = []){
 
     let variables_url = window.location.search.split("&");
