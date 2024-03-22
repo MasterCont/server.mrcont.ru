@@ -12,7 +12,7 @@
 
 <main class="d-flex">
     <section id="under_sidebar" class="min-vh-100">
-        <div class="flex-shrink-0 p-3 content">
+        <div class="flex-shrink-0 p-3 content" style="min-width: 280px">
             <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
                 <?php include "$root/src/assets/images/bootstrap/icons/code-slash.svg"?>
                 <span class="fs-5 fw-semibold mx-2">
