@@ -79,6 +79,39 @@
                         </ul>
                     </div>
                 </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#ai-collapse" aria-expanded="false">
+                        <?php
+                        error_reporting(0);
+                        $result = $localization->simplex->docs->under_sidebar->toggles->ai->title->{$browserLocale};
+                        if (!$result) echo $localization->simplex->docs->under_sidebar->toggles->ai->title->{"eu-US"};
+                        else echo $result;
+                        ?>
+                    </button>
+
+                    <div class="collapse" id="ai-collapse" style="">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><button hx-get='/src/pages/templates/sections/simplex_docs/<?php echo getLocate($browserLocale); ?>/ai_overview' hx-target='#content' onclick="//addGETVars([{name: `toggle`, value: `<?php echo $localization->simplex->docs->under_sidebar->toggles->getting_started->id ?>`}, {name: 'section', value: 'overview'}, {name: `slash_command`, value: false}])" class="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                                    <?php
+                                    error_reporting(0);
+                                    $result = $localization->simplex->docs->under_sidebar->toggles->ai->links->overview->{$browserLocale};
+                                    if (!$result) echo $localization->simplex->docs->under_sidebar->toggles->ai->links->overview->{"eu-US"};
+                                    else echo $result;
+                                    ?>
+                                </button>
+                            </li>
+                            <li><button hx-get='/src/pages/templates/sections/simplex_docs/<?php echo getLocate($browserLocale); ?>/ai_using' hx-target='#content' onclick="//addGETVars([{name: `toggle`, value: `<?php echo $localization->simplex->docs->under_sidebar->toggles->getting_started->id ?>`}, {name: 'section', value: 'overview'}, {name: `slash_command`, value: false}])" class="link-body-emphasis d-inline-flex text-decoration-none rounded">
+                                    <?php
+                                    error_reporting(0);
+                                    $result = $localization->simplex->docs->under_sidebar->toggles->ai->links->using->{$browserLocale};
+                                    if (!$result) echo $localization->simplex->docs->under_sidebar->toggles->ai->links->using->{"eu-US"};
+                                    else echo $result;
+                                    ?>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
         <!--    <li class="border-top my-3"></li>--> <!-- The border line -->
             </ul>
         </div>

@@ -37,7 +37,7 @@
     <script src="/src/js/main.js"></script>
 </head>
 <body>
-    <?php include "$root/src/pages/templates/simplex_sidebar.php"; ?>
+    ;BNRT DU<?php include "$root/src/pages/templates/simplex_sidebar.php"; ?>
     <?php
         error_reporting(0);
         if ($_GET["document"]) {
@@ -46,7 +46,6 @@
         else include "$root/src/pages/templates/simplex_index.php";
         // Подключаем контент главной страницы
     ?>
-    <?php include "$root/src/pages/templates/footers/simplex/$locate/simplex_footer.php"; ?>
     <?php include "$root/src/pages/templates/$locate/footer.php"; // Подключаем футер ?>
 </body>
     <script src="https://unpkg.com/htmx.org@1.9.11"></script>

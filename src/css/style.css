@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    transition: 0.1s !important;
+    transition: 0.3s !important;
 }
 
 :root{
@@ -167,3 +167,29 @@
     flex-direction: column;
     text-align: start;
 }
+
+/* For bootstrap */
+.vh-25{
+    height: 25vh !important;
+}
+
+.vh-50{
+    height: 50vh !important;
+}
+
+.vh-75{
+    height: 75vh !important;
+}
+
+.min-vh-25{
+    min-height: 25vh !important;
+}
+
+.min-vh-50{
+    min-height: 50vh !important;
+}
+
+.min-vh-75{
+    min-height: 75vh !important;
+}
+

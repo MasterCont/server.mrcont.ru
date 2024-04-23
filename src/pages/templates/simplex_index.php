@@ -7,6 +7,7 @@
 try {
     $table_messages = $db_simplex->query("SELECT * FROM ".$env['MYSQL_SIMPLEX_TABLE_MESSAGES'].";");
     $table_reports = $db_simplex->query("SELECT * FROM ".$env['MYSQL_SIMPLEX_TABLE_REPORTS'].";");
+    $table_commands = $db_simplex->query("SELECT * FROM ".$env['MYSQL_SIMPLEX_TABLE_COMMANDS_LIST']." WHERE `active` = 1;");
 } catch (Exception $err) {
     echo $err;
 }
@@ -16,7 +17,7 @@ try {
 ?>
 
 <main id="main">
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary index text-white">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary index text-white min-vh-50 d-flex justify-content-center align-items-center">
         <div class="col-md-6 p-lg-5 mx-auto my-5">
             <h1 class="display-3 fw-bold fadeIn fadeAnimationDown">
                 <?php
@@ -61,7 +62,7 @@ try {
     </div>
 
     <div class="bg-body-tertiary d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-        <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden w-100 fadeIn fadeAnimationUp">
+        <div class="me-md-3 py  -2 px-3 px-md-5 text-center overflow-hidden w-100 fadeIn fadeAnimationUp">
             <div class="my-3 py-3">
                 <h2 class="display-5">
                     <?php
@@ -80,9 +81,29 @@ try {
                     ?>
                 </p>
             </div>
-            <img src="/src/assets/images/simplex_product_img1.png" class="p-3" width="300" height="300" alt="">
+<!--            <img src="/src/assets/images/simplex_product_img1.png" class="p-3" width="300" height="300" alt="">-->
+            <h1>
+                <?php
+                    error_reporting(0);
+                    $result = $localization->simplex->main->products->{"1"}->additionally->{"1"}->{$browserLocale};
+                    if (!$result) echo $localization->simplex->main->products->{"1"}->additionally->{"1"}->{"eu-US"};
+                    else echo $result;
+                ?>
+                <mark class="badge bg-primary">
+                    <?php
+                        if ($table_commands) echo $table_commands->num_rows;
+                        else echo "MANY";
+                    ?>
+                </mark>
+                <?php
+                error_reporting(0);
+                $result = $localization->simplex->main->products->{"1"}->additionally->{"2"}->{$browserLocale};
+                if (!$result) echo $localization->simplex->main->products->{"1"}->additionally->{"2"}->{"eu-US"};
+                else echo $result;
+                ?>
+            </h1>
         </div>
-        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden w-100 fadeIn fadeAnimationUp">
+        <div class="me-md-3 py-2 px-3  px-md-5 text-center overflow-hidden w-100 fadeIn fadeAnimationUp">
             <div class="my-3 p-3">
                 <h2 class="display-5">
                     <?php

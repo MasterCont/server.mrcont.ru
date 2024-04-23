@@ -17,6 +17,8 @@
             <ul>
                 <li>нарушать правила и условия пользования Discord (подробнее - <a href="https://discord.com/terms">https://discord.com/terms</a>);</li>
                 <li>пользоваться ботом и веб-сайтом "Simplex" в силу юного возраста (подробнее - <a href="https://discord.com/terms#2">https://discord.com/terms#2</a>);</li>
+                <li>нарушать соглашение об использовании сервиса GigaChat для физических лиц (подробнее - <a href="https://developers.sber.ru/docs/ru/policies/gigachat-agreement/individuals">https://developers.sber.ru/docs/ru/policies/gigachat-agreement/individuals</a>);</li>
+                <li>нарушать пользовательское соглашение об использовании сервиса GigaChat (в режиме бета-тестирования) (подробнее - <a href="https://developers.sber.ru/docs/ru/policies/gigachat-agreement/beta">https://developers.sber.ru/docs/ru/policies/gigachat-agreement/beta</a>);</li>
                 <li>изменять или копировать материалы;</li>
                 <li>использовать материалы, нарушающие законодательство страны;</li>
                 <li>использовать материалы в коммерческих целях или для публичного показа;</li>

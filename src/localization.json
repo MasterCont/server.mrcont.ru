@@ -37,8 +37,18 @@
             "eu-US": "Custom Commands"
           },
           "description": {
-            "ru-RU": "Со множеством скрытых действий по модерации.",
+            "ru-RU": "Со множеством скрытых действий для модерации.",
             "eu-US": "With many hidden moderation actions."
+          },
+          "additionally": {
+            "1": {
+              "ru-RU": "Приложение поддерживает",
+              "eu-US": "The application supports"
+            },
+            "2": {
+              "ru-RU": "команды.",
+              "eu-US": "commands."
+            }
           }
         },
         "2": {
@@ -127,6 +137,23 @@
             },
             "links": {
 
+            }
+          },
+          "ai": {
+            "id": "ai",
+            "title": {
+              "ru-RU": "Использование ИИ",
+              "eu-US": "Using AI"
+            },
+            "links": {
+              "overview": {
+                "ru-RU": "Обзор ИИ",
+                "eu-US": "Overview AI"
+              },
+              "using": {
+                "ru-RU": "Использование",
+                "eu-US": "Using"
+              }
             }
           }
         }

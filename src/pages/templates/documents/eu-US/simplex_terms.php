@@ -17,6 +17,8 @@
         <ul>
             <li>violate the terms and conditions of use of Discord (for more information - <a href="https://discord.com/terms ">https://discord.com/terms </a>);</li>
             <li>to use the bot and the Simplex website due to a young age (for more information - <a href="https://discord.com/terms#2 ">https://discord.com/terms#2 </a>);</li>
+            <li>violate the agreement on the use of the GigaChat service for individuals (more details - <a href="https://developers.sber.ru/docs/ru/policies/gigachat-agreement/individuals">https://developers.sber.ru/docs/ru/policies/gigachat-agreement/individuals</a>);</li>
+            <li>violate the user agreement on the use of the GigaChat service (in beta testing mode) (more details - <a href="https://developers.sber.ru/docs/ru/policies/gigachat-agreement/beta">https://developers.sber.ru/docs/ru/policies/gigachat-agreement/beta</a>);</li>
             <li>modify or copy materials;</li>
             <li>use materials that violate the laws of the country;</li>
             <li>use the materials for commercial purposes or for public display;</li>
